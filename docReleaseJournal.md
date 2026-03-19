@@ -17,13 +17,13 @@
 ## Текущая задача
 
 - Статус: `CURRENT`
-- Порядок: `05`
-- Раздел документации: `Конструкция метамодели`
-- Страница документации: `Как проектировать типы объектов и атрибуты`
-- Файл требований: `metadoc-req/Language-ObjectTypesAndAttributes.md`
-- Целевой файл документа: `metadoc-pages/Language-ObjectTypesAndAttributes.md`
-- Файл отчёта: `metadoc-reports/Language-ObjectTypesAndAttributes-report.md`
-- Следующая задача после завершения: `Language-RelationsHierarchiesAndReferenceObjects.md`
+- Порядок: `10`
+- Раздел документации: `Проверка и развитие`
+- Страница документации: `Как проверить метамодель на пилоте и не переусложнить язык`
+- Файл требований: `metadoc-req/Validation-PilotValidationAndAvoidOvermodeling.md`
+- Целевой файл документа: `metadoc-pages/Validation-PilotValidationAndAvoidOvermodeling.md`
+- Файл отчёта: `metadoc-reports/Validation-PilotValidationAndAvoidOvermodeling-report.md`
+- Следующая задача после завершения: `Validation-ScalingAndMetamodelGovernance.md`
 
 ## Очередь документов
 
@@ -33,12 +33,12 @@
 | 02 | DONE | Введение | Маршруты чтения по ролям и сценариям | metadoc-req/Introduction-ReadingPathsByRoleAndScenario.md | metadoc-pages/Introduction-ReadingPathsByRoleAndScenario.md | metadoc-reports/Introduction-ReadingPathsByRoleAndScenario-report.md |
 | 03 | DONE | От идеи к языку | Как выбрать границы предметной области и пилотный кейс | metadoc-req/Discovery-DomainScopeAndPilotCase.md | metadoc-pages/Discovery-DomainScopeAndPilotCase.md | metadoc-reports/Discovery-DomainScopeAndPilotCase-report.md |
 | 04 | DONE | От идеи к языку | Как выделить сущности из практики и собрать минимально достаточную метамодель | metadoc-req/Discovery-ExtractConceptsAndBuildMinimalMetamodel.md | metadoc-pages/Discovery-ExtractConceptsAndBuildMinimalMetamodel.md | metadoc-reports/Discovery-ExtractConceptsAndBuildMinimalMetamodel-report.md |
-| 05 | CURRENT | Конструкция метамодели | Как проектировать типы объектов и атрибуты | metadoc-req/Language-ObjectTypesAndAttributes.md | metadoc-pages/Language-ObjectTypesAndAttributes.md | metadoc-reports/Language-ObjectTypesAndAttributes-report.md |
-| 06 | QUEUED | Конструкция метамодели | Как проектировать связи, иерархии и переиспользуемые справочники | metadoc-req/Language-RelationsHierarchiesAndReferenceObjects.md | metadoc-pages/Language-RelationsHierarchiesAndReferenceObjects.md | metadoc-reports/Language-RelationsHierarchiesAndReferenceObjects-report.md |
-| 07 | QUEUED | Конструкция метамодели | Как задавать статусы, жизненные циклы, версии и обязательные правила | metadoc-req/Language-LifecyclesStatusesVersionsAndRules.md | metadoc-pages/Language-LifecyclesStatusesVersionsAndRules.md | metadoc-reports/Language-LifecyclesStatusesVersionsAndRules-report.md |
-| 08 | QUEUED | Представления и публикация | Как делать диаграммы, таблицы и несколько представлений одной модели | metadoc-req/Views-DiagramTableAndMultipleViews.md | metadoc-pages/Views-DiagramTableAndMultipleViews.md | metadoc-reports/Views-DiagramTableAndMultipleViews-report.md |
-| 09 | QUEUED | Представления и публикация | Как делать карточки объектов, паспорта и документы на базе модели | metadoc-req/Views-ObjectCardsPassportsAndDocuments.md | metadoc-pages/Views-ObjectCardsPassportsAndDocuments.md | metadoc-reports/Views-ObjectCardsPassportsAndDocuments-report.md |
-| 10 | QUEUED | Проверка и развитие | Как проверить метамодель на пилоте и не переусложнить язык | metadoc-req/Validation-PilotValidationAndAvoidOvermodeling.md | metadoc-pages/Validation-PilotValidationAndAvoidOvermodeling.md | metadoc-reports/Validation-PilotValidationAndAvoidOvermodeling-report.md |
+| 05 | DONE | Конструкция метамодели | Как проектировать типы объектов и атрибуты | metadoc-req/Language-ObjectTypesAndAttributes.md | metadoc-pages/Language-ObjectTypesAndAttributes.md | metadoc-reports/Language-ObjectTypesAndAttributes-report.md |
+| 06 | DONE | Конструкция метамодели | Как проектировать связи, иерархии и переиспользуемые справочники | metadoc-req/Language-RelationsHierarchiesAndReferenceObjects.md | metadoc-pages/Language-RelationsHierarchiesAndReferenceObjects.md | metadoc-reports/Language-RelationsHierarchiesAndReferenceObjects-report.md |
+| 07 | DONE | Конструкция метамодели | Как задавать статусы, жизненные циклы, версии и обязательные правила | metadoc-req/Language-LifecyclesStatusesVersionsAndRules.md | metadoc-pages/Language-LifecyclesStatusesVersionsAndRules.md | metadoc-reports/Language-LifecyclesStatusesVersionsAndRules-report.md |
+| 08 | DONE | Представления и публикация | Как делать диаграммы, таблицы и несколько представлений одной модели | metadoc-req/Views-DiagramTableAndMultipleViews.md | metadoc-pages/Views-DiagramTableAndMultipleViews.md | metadoc-reports/Views-DiagramTableAndMultipleViews-report.md |
+| 09 | DONE | Представления и публикация | Как делать карточки объектов, паспорта и документы на базе модели | metadoc-req/Views-ObjectCardsPassportsAndDocuments.md | metadoc-pages/Views-ObjectCardsPassportsAndDocuments.md | metadoc-reports/Views-ObjectCardsPassportsAndDocuments-report.md |
+| 10 | CURRENT | Проверка и развитие | Как проверить метамодель на пилоте и не переусложнить язык | metadoc-req/Validation-PilotValidationAndAvoidOvermodeling.md | metadoc-pages/Validation-PilotValidationAndAvoidOvermodeling.md | metadoc-reports/Validation-PilotValidationAndAvoidOvermodeling-report.md |
 | 11 | QUEUED | Проверка и развитие | Как масштабировать и сопровождать метамодель в командах | metadoc-req/Validation-ScalingAndMetamodelGovernance.md | metadoc-pages/Validation-ScalingAndMetamodelGovernance.md | metadoc-reports/Validation-ScalingAndMetamodelGovernance-report.md |
 | 12 | QUEUED | Интеграция и автоматизация | Как использовать REST API, MCP и AI поверх кастомной метамодели | metadoc-req/Integrations-RestApiMcpAndAi.md | metadoc-pages/Integrations-RestApiMcpAndAi.md | metadoc-reports/Integrations-RestApiMcpAndAi-report.md |
 | 13 | QUEUED | Интеграция и автоматизация | Как встроить модель в governance, review и операционные процессы | metadoc-req/Integrations-ModelInGovernanceReviewAndOperations.md | metadoc-pages/Integrations-ModelInGovernanceReviewAndOperations.md | metadoc-reports/Integrations-ModelInGovernanceReviewAndOperations-report.md |
@@ -56,3 +56,8 @@
 | 2026-03-19 | 02 | Маршруты чтения по ролям и сценариям | metadoc-pages/Introduction-ReadingPathsByRoleAndScenario.md | metadoc-reports/Introduction-ReadingPathsByRoleAndScenario-report.md |
 | 2026-03-19 | 03 | Как выбрать границы предметной области и пилотный кейс | metadoc-pages/Discovery-DomainScopeAndPilotCase.md | metadoc-reports/Discovery-DomainScopeAndPilotCase-report.md |
 | 2026-03-19 | 04 | Как выделить сущности из практики и собрать минимально достаточную метамодель | metadoc-pages/Discovery-ExtractConceptsAndBuildMinimalMetamodel.md | metadoc-reports/Discovery-ExtractConceptsAndBuildMinimalMetamodel-report.md |
+| 2026-03-19 | 05 | Как проектировать типы объектов и атрибуты | metadoc-pages/Language-ObjectTypesAndAttributes.md | metadoc-reports/Language-ObjectTypesAndAttributes-report.md |
+| 2026-03-19 | 06 | Как проектировать связи, иерархии и переиспользуемые справочники | metadoc-pages/Language-RelationsHierarchiesAndReferenceObjects.md | metadoc-reports/Language-RelationsHierarchiesAndReferenceObjects-report.md |
+| 2026-03-19 | 07 | Как задавать статусы, жизненные циклы, версии и обязательные правила | metadoc-pages/Language-LifecyclesStatusesVersionsAndRules.md | metadoc-reports/Language-LifecyclesStatusesVersionsAndRules-report.md |
+| 2026-03-19 | 08 | Как делать диаграммы, таблицы и несколько представлений одной модели | metadoc-pages/Views-DiagramTableAndMultipleViews.md | metadoc-reports/Views-DiagramTableAndMultipleViews-report.md |
+| 2026-03-19 | 09 | Как делать карточки объектов, паспорта и документы на базе модели | metadoc-pages/Views-ObjectCardsPassportsAndDocuments.md | metadoc-reports/Views-ObjectCardsPassportsAndDocuments-report.md |
