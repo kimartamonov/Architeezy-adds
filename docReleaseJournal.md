@@ -17,13 +17,13 @@
 ## Текущая задача
 
 - Статус: `CURRENT`
-- Порядок: `10`
-- Раздел документации: `Проверка и развитие`
-- Страница документации: `Как проверить метамодель на пилоте и не переусложнить язык`
-- Файл требований: `metadoc-req/Validation-PilotValidationAndAvoidOvermodeling.md`
-- Целевой файл документа: `metadoc-pages/Validation-PilotValidationAndAvoidOvermodeling.md`
-- Файл отчёта: `metadoc-reports/Validation-PilotValidationAndAvoidOvermodeling-report.md`
-- Следующая задача после завершения: `Validation-ScalingAndMetamodelGovernance.md`
+- Порядок: `12`
+- Раздел документации: `Интеграция и автоматизация`
+- Страница документации: `Как использовать REST API, MCP и AI поверх кастомной метамодели`
+- Файл требований: `metadoc-req/Integrations-RestApiMcpAndAi.md`
+- Целевой файл документа: `metadoc-pages/Integrations-RestApiMcpAndAi.md`
+- Файл отчёта: `metadoc-reports/Integrations-RestApiMcpAndAi-report.md`
+- Следующая задача после завершения: `Integrations-ModelInGovernanceReviewAndOperations.md`
 
 ## Очередь документов
 
@@ -38,9 +38,9 @@
 | 07 | DONE | Конструкция метамодели | Как задавать статусы, жизненные циклы, версии и обязательные правила | metadoc-req/Language-LifecyclesStatusesVersionsAndRules.md | metadoc-pages/Language-LifecyclesStatusesVersionsAndRules.md | metadoc-reports/Language-LifecyclesStatusesVersionsAndRules-report.md |
 | 08 | DONE | Представления и публикация | Как делать диаграммы, таблицы и несколько представлений одной модели | metadoc-req/Views-DiagramTableAndMultipleViews.md | metadoc-pages/Views-DiagramTableAndMultipleViews.md | metadoc-reports/Views-DiagramTableAndMultipleViews-report.md |
 | 09 | DONE | Представления и публикация | Как делать карточки объектов, паспорта и документы на базе модели | metadoc-req/Views-ObjectCardsPassportsAndDocuments.md | metadoc-pages/Views-ObjectCardsPassportsAndDocuments.md | metadoc-reports/Views-ObjectCardsPassportsAndDocuments-report.md |
-| 10 | CURRENT | Проверка и развитие | Как проверить метамодель на пилоте и не переусложнить язык | metadoc-req/Validation-PilotValidationAndAvoidOvermodeling.md | metadoc-pages/Validation-PilotValidationAndAvoidOvermodeling.md | metadoc-reports/Validation-PilotValidationAndAvoidOvermodeling-report.md |
-| 11 | QUEUED | Проверка и развитие | Как масштабировать и сопровождать метамодель в командах | metadoc-req/Validation-ScalingAndMetamodelGovernance.md | metadoc-pages/Validation-ScalingAndMetamodelGovernance.md | metadoc-reports/Validation-ScalingAndMetamodelGovernance-report.md |
-| 12 | QUEUED | Интеграция и автоматизация | Как использовать REST API, MCP и AI поверх кастомной метамодели | metadoc-req/Integrations-RestApiMcpAndAi.md | metadoc-pages/Integrations-RestApiMcpAndAi.md | metadoc-reports/Integrations-RestApiMcpAndAi-report.md |
+| 10 | DONE | Проверка и развитие | Как проверить метамодель на пилоте и не переусложнить язык | metadoc-req/Validation-PilotValidationAndAvoidOvermodeling.md | metadoc-pages/Validation-PilotValidationAndAvoidOvermodeling.md | metadoc-reports/Validation-PilotValidationAndAvoidOvermodeling-report.md |
+| 11 | DONE | Проверка и развитие | Как масштабировать и сопровождать метамодель в командах | metadoc-req/Validation-ScalingAndMetamodelGovernance.md | metadoc-pages/Validation-ScalingAndMetamodelGovernance.md | metadoc-reports/Validation-ScalingAndMetamodelGovernance-report.md |
+| 12 | CURRENT | Интеграция и автоматизация | Как использовать REST API, MCP и AI поверх кастомной метамодели | metadoc-req/Integrations-RestApiMcpAndAi.md | metadoc-pages/Integrations-RestApiMcpAndAi.md | metadoc-reports/Integrations-RestApiMcpAndAi-report.md |
 | 13 | QUEUED | Интеграция и автоматизация | Как встроить модель в governance, review и операционные процессы | metadoc-req/Integrations-ModelInGovernanceReviewAndOperations.md | metadoc-pages/Integrations-ModelInGovernanceReviewAndOperations.md | metadoc-reports/Integrations-ModelInGovernanceReviewAndOperations-report.md |
 | 14 | QUEUED | Прикладные паттерны | Паттерн: каталоги и управленческие реестры | metadoc-req/Patterns-CatalogsAndManagementRegisters.md | metadoc-pages/Patterns-CatalogsAndManagementRegisters.md | metadoc-reports/Patterns-CatalogsAndManagementRegisters-report.md |
 | 15 | QUEUED | Прикладные паттерны | Паттерн: процессы, требования и traceability | metadoc-req/Patterns-ProcessesRequirementsAndTraceability.md | metadoc-pages/Patterns-ProcessesRequirementsAndTraceability.md | metadoc-reports/Patterns-ProcessesRequirementsAndTraceability-report.md |
@@ -61,3 +61,5 @@
 | 2026-03-19 | 07 | Как задавать статусы, жизненные циклы, версии и обязательные правила | metadoc-pages/Language-LifecyclesStatusesVersionsAndRules.md | metadoc-reports/Language-LifecyclesStatusesVersionsAndRules-report.md |
 | 2026-03-19 | 08 | Как делать диаграммы, таблицы и несколько представлений одной модели | metadoc-pages/Views-DiagramTableAndMultipleViews.md | metadoc-reports/Views-DiagramTableAndMultipleViews-report.md |
 | 2026-03-19 | 09 | Как делать карточки объектов, паспорта и документы на базе модели | metadoc-pages/Views-ObjectCardsPassportsAndDocuments.md | metadoc-reports/Views-ObjectCardsPassportsAndDocuments-report.md |
+| 2026-03-19 | 10 | Как проверить метамодель на пилоте и не переусложнить язык | metadoc-pages/Validation-PilotValidationAndAvoidOvermodeling.md | metadoc-reports/Validation-PilotValidationAndAvoidOvermodeling-report.md |
+| 2026-03-19 | 11 | Как масштабировать и сопровождать метамодель в командах | metadoc-pages/Validation-ScalingAndMetamodelGovernance.md | metadoc-reports/Validation-ScalingAndMetamodelGovernance-report.md |
