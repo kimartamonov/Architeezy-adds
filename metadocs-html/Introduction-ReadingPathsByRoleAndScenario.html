@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Маршруты чтения по ролям и сценариям</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <nav class="sidebar">
+<a class="home-link" href="index.html">Все страницы</a>
+<div class="nav-section"><div class="nav-section-title">Введение</div><ul>
+<li><a class="" href="Introduction-WhatIsMetamodelAndWhenNeeded.html">Что такое метамодель в Architeezy и когда она нужна</a></li>
+<li><a class="current" href="Introduction-ReadingPathsByRoleAndScenario.html">Маршруты чтения по ролям и сценариям</a></li>
+</ul></div>
+<div class="nav-section"><div class="nav-section-title">От идеи к языку</div><ul>
+<li><a class="" href="Discovery-DomainScopeAndPilotCase.html">Как выбрать границы предметной области и пилотный кейс</a></li>
+<li><a class="" href="Discovery-ExtractConceptsAndBuildMinimalMetamodel.html">Как выделить сущности из практики и собрать минимально достаточную метамодель</a></li>
+</ul></div>
+<div class="nav-section"><div class="nav-section-title">Конструкция метамодели</div><ul>
+<li><a class="" href="Language-ObjectTypesAndAttributes.html">Как проектировать типы объектов и атрибуты</a></li>
+<li><a class="" href="Language-RelationsHierarchiesAndReferenceObjects.html">Как проектировать связи, иерархии и переиспользуемые справочники</a></li>
+<li><a class="" href="Language-LifecyclesStatusesVersionsAndRules.html">Как задавать статусы, жизненные циклы, версии и обязательные правила</a></li>
+</ul></div>
+<div class="nav-section"><div class="nav-section-title">Представления и публикация</div><ul>
+<li><a class="" href="Views-DiagramTableAndMultipleViews.html">Как делать диаграммы, таблицы и несколько представлений одной модели</a></li>
+<li><a class="" href="Views-ObjectCardsPassportsAndDocuments.html">Как делать карточки объектов, паспорта и документы на базе модели</a></li>
+</ul></div>
+<div class="nav-section"><div class="nav-section-title">Проверка и развитие</div><ul>
+<li><a class="" href="Validation-PilotValidationAndAvoidOvermodeling.html">Как проверить метамодель на пилоте и не переусложнить язык</a></li>
+<li><a class="" href="Validation-ScalingAndMetamodelGovernance.html">Как масштабировать и сопровождать метамодель в командах</a></li>
+</ul></div>
+<div class="nav-section"><div class="nav-section-title">Интеграция и автоматизация</div><ul>
+<li><a class="" href="Integrations-RestApiMcpAndAi.html">Как использовать REST API, MCP и AI поверх кастомной метамодели</a></li>
+<li><a class="" href="Integrations-ModelInGovernanceReviewAndOperations.html">Как встроить модель в governance, review и операционные процессы</a></li>
+</ul></div>
+<div class="nav-section"><div class="nav-section-title">Прикладные паттерны</div><ul>
+<li><a class="" href="Patterns-CatalogsAndManagementRegisters.html">Паттерн: каталоги и управленческие реестры</a></li>
+<li><a class="" href="Patterns-ProcessesRequirementsAndTraceability.html">Паттерн: процессы, требования и traceability</a></li>
+<li><a class="" href="Patterns-IntegrationsEventsAndTechnicalContracts.html">Паттерн: интеграции, события и технические контракты</a></li>
+<li><a class="" href="Patterns-DataGovernanceGlossariesAndCompliance.html">Паттерн: data governance, глоссарии и compliance обмена данными</a></li>
+<li><a class="" href="Patterns-InfrastructurePlatformAndOperations.html">Паттерн: инфраструктура, платформа и эксплуатационные зависимости</a></li>
+</ul></div>
+</nav>
+    <main class="content">
+      <header class="page-header">
+        <h1>Маршруты чтения по ролям и сценариям</h1>
+      </header>
+      <aside class="toc"><div class="toc-title">На странице</div><ul>
+<li class="toc-level-2"><a href="#о-чём-эта-страница">О чём эта страница</a></li>
+<li class="toc-level-2"><a href="#когда-эта-страница-полезна">Когда эта страница полезна</a></li>
+<li class="toc-level-2"><a href="#как-пользоваться-этой-страницей">Как пользоваться этой страницей</a></li>
+<li class="toc-level-2"><a href="#базовая-логика-чтения-документации">Базовая логика чтения документации</a></li>
+<li class="toc-level-2"><a href="#быстрый-выбор-маршрута">Быстрый выбор маршрута</a></li>
+<li class="toc-level-3"><a href="#если-вам-нужен-самый-короткий-путь">Если вам нужен самый короткий путь</a></li>
+<li class="toc-level-3"><a href="#если-вы-уже-знаете-свой-сценарий">Если вы уже знаете свой сценарий</a></li>
+<li class="toc-level-2"><a href="#карта-ролей-и-рекомендуемых-маршрутов">Карта ролей и рекомендуемых маршрутов</a></li>
+<li class="toc-level-3"><a href="#1-корпоративный-архитектор">1. Корпоративный архитектор</a></li>
+<li class="toc-level-3"><a href="#2-системный-или-интеграционный-архитектор">2. Системный или интеграционный архитектор</a></li>
+<li class="toc-level-3"><a href="#3-бизнес-аналитик-или-владелец-процесса">3. Бизнес-аналитик или владелец процесса</a></li>
+<li class="toc-level-3"><a href="#4-архитектор-данных-или-data-governance-lead">4. Архитектор данных или data governance lead</a></li>
+<li class="toc-level-3"><a href="#5-инфраструктурный-или-платформенный-архитектор">5. Инфраструктурный или платформенный архитектор</a></li>
+<li class="toc-level-2"><a href="#маршруты-по-типу-сценария">Маршруты по типу сценария</a></li>
+<li class="toc-level-3"><a href="#если-вы-строите-каталог-или-управленческий-реестр">Если вы строите каталог или управленческий реестр</a></li>
+<li class="toc-level-3"><a href="#если-вы-строите-процессную-или-traceability-модель">Если вы строите процессную или traceability-модель</a></li>
+<li class="toc-level-3"><a href="#если-вы-строите-интеграционный-или-событийный-dsl">Если вы строите интеграционный или событийный DSL</a></li>
+<li class="toc-level-3"><a href="#если-вы-строите-data-governance-модель">Если вы строите data governance-модель</a></li>
+<li class="toc-level-3"><a href="#если-вы-строите-инфраструктурную-или-эксплуатационную-модель">Если вы строите инфраструктурную или эксплуатационную модель</a></li>
+<li class="toc-level-2"><a href="#отдельный-маршрут-для-быстрого-пилота">Отдельный маршрут для быстрого пилота</a></li>
+<li class="toc-level-3"><a href="#цель-маршрута">Цель маршрута</a></li>
+<li class="toc-level-3"><a href="#маршрут">Маршрут</a></li>
+<li class="toc-level-3"><a href="#когда-выбирать-именно-его">Когда выбирать именно его</a></li>
+<li class="toc-level-2"><a href="#отдельный-маршрут-для-api-mcp-и-ai-сценариев">Отдельный маршрут для API, MCP и AI-сценариев</a></li>
+<li class="toc-level-3"><a href="#маршрут-2">Маршрут</a></li>
+<li class="toc-level-3"><a href="#когда-этот-маршрут-нужен">Когда этот маршрут нужен</a></li>
+<li class="toc-level-2"><a href="#как-выбрать-маршрут-если-ваш-кейс-смешанный">Как выбрать маршрут, если ваш кейс смешанный</a></li>
+<li class="toc-level-2"><a href="#если-вы-делаете-маршрут-для-команды-а-не-для-себя">Если вы делаете маршрут для команды, а не для себя</a></li>
+<li class="toc-level-2"><a href="#что-читать-дальше">Что читать дальше</a></li>
+<li class="toc-level-2"><a href="#краткий-вывод">Краткий вывод</a></li>
+</ul></aside>
+      <article class="article">
+        <h1 id="маршруты-чтения-по-ролям-и-сценариям">Маршруты чтения по ролям и сценариям</h1>
+<h2 id="о-чём-эта-страница">О чём эта страница</h2>
+<p>Эта страница помогает быстро выбрать правильный путь по документации по метамоделям Architeezy.</p>
+<p>Она нужна для ситуации, когда пользователь уже понимает, что документация ему нужна, но не хочет читать всё подряд. Вместо этого он хочет быстро ответить на три вопроса:</p>
+<ul>
+<li>с чего начать именно для моей роли;</li>
+<li>какие страницы обязательны именно для моего кейса;</li>
+<li>куда идти дальше после первых шагов.</li>
+</ul>
+<div class="screenshot-placeholder">[Скриншот 1 - Навигационная схема или оглавление документации по метамоделям с выделенными маршрутами для разных ролей]</div>
+<h2 id="когда-эта-страница-полезна">Когда эта страница полезна</h2>
+<p>Открывайте её, если:</p>
+<ul>
+<li>вы пришли в документацию с конкретной задачей, а не для полного изучения всей темы;</li>
+<li>вы знаете свою роль, но не знаете, какой раздел читать первым;</li>
+<li>вам нужно быстро провести пилот и не тратить время на лишние главы;</li>
+<li>вы строите документационный маршрут для команды, а не только для себя;</li>
+<li>вы хотите понять, где искать примеры под свой тип метамодели.</li>
+</ul>
+<h2 id="как-пользоваться-этой-страницей">Как пользоваться этой страницей</h2>
+<p>Используйте её как карту маршрутов, а не как учебник.</p>
+<p>Лучший способ работы такой:</p>
+<ol>
+<li>Найдите свою роль или ближайший к ней портрет.</li>
+<li>Найдите свой тип задачи или предметной области.</li>
+<li>Пройдите сначала обязательные страницы маршрута.</li>
+<li>Затем переходите к прикладному паттерну и соседним темам только при необходимости.</li>
+</ol>
+<p>Если ваш кейс смешанный, берите базовый маршрут по роли, а затем добавляйте прикладной паттерн по задаче.</p>
+<h2 id="базовая-логика-чтения-документации">Базовая логика чтения документации</h2>
+<p>Почти для всех пользователей путь выглядит так:</p>
+<ol>
+<li>Понять, нужна ли вообще собственная метамодель.</li>
+<li>Определить границы предметной области и пилотный кейс.</li>
+<li>Выделить сущности, атрибуты и связи.</li>
+<li>Выбрать представления модели.</li>
+<li>Проверить метамодель на пилоте.</li>
+<li>При необходимости перейти к прикладным паттернам, API/MCP или масштабированию.</li>
+</ol>
+<p>Если упростить ещё сильнее, то документация делится на три уровня:</p>
+<ul>
+<li>входные страницы: помогают понять, что делать и с чего начать;</li>
+<li>методические страницы: помогают спроектировать метамодель правильно;</li>
+<li>прикладные паттерны: помогают адаптировать методику под конкретный тип задач.</li>
+</ul>
+<h2 id="быстрый-выбор-маршрута">Быстрый выбор маршрута</h2>
+<h3 id="если-вам-нужен-самый-короткий-путь">Если вам нужен самый короткий путь</h3>
+<p>Идите по маршруту быстрого пилота:</p>
+<ol>
+<li><a class="inline-page-link" href="Introduction-WhatIsMetamodelAndWhenNeeded.html"><code>Что такое метамодель в Architeezy и когда она нужна</code></a></li>
+<li><a class="inline-page-link" href="Discovery-DomainScopeAndPilotCase.html"><code>Как выбрать границы предметной области и пилотный кейс</code></a></li>
+<li><a class="inline-page-link" href="Discovery-ExtractConceptsAndBuildMinimalMetamodel.html"><code>Как выделить сущности из практики и собрать минимально достаточную метамодель</code></a></li>
+<li><a class="inline-page-link" href="Language-ObjectTypesAndAttributes.html"><code>Как проектировать типы объектов и атрибуты</code></a></li>
+<li><a class="inline-page-link" href="Validation-PilotValidationAndAvoidOvermodeling.html"><code>Как проверить метамодель на пилоте и не переусложнить язык</code></a></li>
+</ol>
+<p>Этот маршрут подходит, если вам нужно как можно быстрее получить первую рабочую версию языка.</p>
+<h3 id="если-вы-уже-знаете-свой-сценарий">Если вы уже знаете свой сценарий</h3>
+<p>Сразу перейдите к прикладному паттерну, но не пропускайте минимум из двух страниц:</p>
+<ul>
+<li><a class="inline-page-link" href="Discovery-DomainScopeAndPilotCase.html"><code>Как выбрать границы предметной области и пилотный кейс</code></a></li>
+<li><a class="inline-page-link" href="Language-ObjectTypesAndAttributes.html"><code>Как проектировать типы объектов и атрибуты</code></a></li>
+</ul>
+<p>После этого можно идти в нужный паттерн:</p>
+<ul>
+<li>каталоги и управленческие реестры;</li>
+<li>процессы, требования и traceability;</li>
+<li>интеграции, события и технические контракты;</li>
+<li>data governance, глоссарии и compliance;</li>
+<li>инфраструктура, платформа и эксплуатационные зависимости.</li>
+</ul>
+<h2 id="карта-ролей-и-рекомендуемых-маршрутов">Карта ролей и рекомендуемых маршрутов</h2>
+<h3 id="1-корпоративный-архитектор">1. Корпоративный архитектор</h3>
+<h4 id="типичные-задачи">Типичные задачи</h4>
+<ul>
+<li>capability map и портфель инициатив;</li>
+<li>сервисный каталог предприятия;</li>
+<li>архитектурные решения и исключения;</li>
+<li>единый реестр систем, владельцев и зависимостей.</li>
+</ul>
+<h4 id="с-чего-начать">С чего начать</h4>
+<ol>
+<li><a class="inline-page-link" href="Introduction-WhatIsMetamodelAndWhenNeeded.html"><code>Что такое метамодель в Architeezy и когда она нужна</code></a></li>
+<li><a class="inline-page-link" href="Discovery-DomainScopeAndPilotCase.html"><code>Как выбрать границы предметной области и пилотный кейс</code></a></li>
+<li><a class="inline-page-link" href="Discovery-ExtractConceptsAndBuildMinimalMetamodel.html"><code>Как выделить сущности из практики и собрать минимально достаточную метамодель</code></a></li>
+<li><a class="inline-page-link" href="Language-ObjectTypesAndAttributes.html"><code>Как проектировать типы объектов и атрибуты</code></a></li>
+<li><a class="inline-page-link" href="Language-RelationsHierarchiesAndReferenceObjects.html"><code>Как проектировать связи, иерархии и переиспользуемые справочники</code></a></li>
+<li><a class="inline-page-link" href="Views-DiagramTableAndMultipleViews.html"><code>Как делать диаграммы, таблицы и несколько представлений одной модели</code></a></li>
+<li><a class="inline-page-link" href="Validation-PilotValidationAndAvoidOvermodeling.html"><code>Как проверить метамодель на пилоте и не переусложнить язык</code></a></li>
+</ol>
+<h4 id="куда-идти-дальше">Куда идти дальше</h4>
+<ul>
+<li><a class="inline-page-link" href="Patterns-CatalogsAndManagementRegisters.html"><code>Паттерн: каталоги и управленческие реестры</code></a></li>
+<li><a class="inline-page-link" href="Views-ObjectCardsPassportsAndDocuments.html"><code>Как делать карточки объектов, паспорта и документы на базе модели</code></a></li>
+<li><a class="inline-page-link" href="Validation-ScalingAndMetamodelGovernance.html"><code>Как масштабировать и сопровождать метамодель в командах</code></a></li>
+<li><a class="inline-page-link" href="Integrations-ModelInGovernanceReviewAndOperations.html"><code>Как встроить модель в governance, review и операционные процессы</code></a></li>
+</ul>
+<h4 id="когда-этот-маршрут-особенно-подходит">Когда этот маршрут особенно подходит</h4>
+<ul>
+<li>когда модель должна быть полезна и архитекторам, и комитету, и руководителям;</li>
+<li>когда нужно совместить каталог, диаграмму и паспорт объекта;</li>
+<li>когда предметная область уже есть, но язык компании ещё не зафиксирован.</li>
+</ul>
+<h3 id="2-системный-или-интеграционный-архитектор">2. Системный или интеграционный архитектор</h3>
+<h4 id="типичные-задачи-2">Типичные задачи</h4>
+<ul>
+<li>интеграционный контракт;</li>
+<li>event-driven модель домена;</li>
+<li>технический каталог взаимодействий;</li>
+<li>проектирование solution design с едиными правилами.</li>
+</ul>
+<h4 id="с-чего-начать-2">С чего начать</h4>
+<ol>
+<li><a class="inline-page-link" href="Introduction-WhatIsMetamodelAndWhenNeeded.html"><code>Что такое метамодель в Architeezy и когда она нужна</code></a></li>
+<li><a class="inline-page-link" href="Discovery-DomainScopeAndPilotCase.html"><code>Как выбрать границы предметной области и пилотный кейс</code></a></li>
+<li><a class="inline-page-link" href="Discovery-ExtractConceptsAndBuildMinimalMetamodel.html"><code>Как выделить сущности из практики и собрать минимально достаточную метамодель</code></a></li>
+<li><a class="inline-page-link" href="Language-ObjectTypesAndAttributes.html"><code>Как проектировать типы объектов и атрибуты</code></a></li>
+<li><a class="inline-page-link" href="Language-RelationsHierarchiesAndReferenceObjects.html"><code>Как проектировать связи, иерархии и переиспользуемые справочники</code></a></li>
+<li><a class="inline-page-link" href="Language-LifecyclesStatusesVersionsAndRules.html"><code>Как задавать статусы, жизненные циклы, версии и обязательные правила</code></a></li>
+<li><a class="inline-page-link" href="Views-DiagramTableAndMultipleViews.html"><code>Как делать диаграммы, таблицы и несколько представлений одной модели</code></a></li>
+</ol>
+<h4 id="куда-идти-дальше-2">Куда идти дальше</h4>
+<ul>
+<li><a class="inline-page-link" href="Patterns-IntegrationsEventsAndTechnicalContracts.html"><code>Паттерн: интеграции, события и технические контракты</code></a></li>
+<li><a class="inline-page-link" href="Integrations-RestApiMcpAndAi.html"><code>Как использовать REST API, MCP и AI поверх кастомной метамодели</code></a></li>
+<li><a class="inline-page-link" href="Validation-PilotValidationAndAvoidOvermodeling.html"><code>Как проверить метамодель на пилоте и не переусложнить язык</code></a></li>
+</ul>
+<h4 id="когда-этот-маршрут-особенно-подходит-2">Когда этот маршрут особенно подходит</h4>
+<ul>
+<li>когда стандартных C4/UML схем уже недостаточно;</li>
+<li>когда нужно одинаково описывать контракты и события;</li>
+<li>когда модель должна работать и как схема, и как каталог.</li>
+</ul>
+<h3 id="3-бизнес-аналитик-или-владелец-процесса">3. Бизнес-аналитик или владелец процесса</h3>
+<h4 id="типичные-задачи-3">Типичные задачи</h4>
+<ul>
+<li>процесс с ролями, документами и SLA;</li>
+<li>traceability от проблемы до проверки результата;</li>
+<li>операционная модель подразделения;</li>
+<li>язык для внутренней трансформации процесса.</li>
+</ul>
+<h4 id="с-чего-начать-3">С чего начать</h4>
+<ol>
+<li><a class="inline-page-link" href="Introduction-WhatIsMetamodelAndWhenNeeded.html"><code>Что такое метамодель в Architeezy и когда она нужна</code></a></li>
+<li><a class="inline-page-link" href="Discovery-DomainScopeAndPilotCase.html"><code>Как выбрать границы предметной области и пилотный кейс</code></a></li>
+<li><a class="inline-page-link" href="Discovery-ExtractConceptsAndBuildMinimalMetamodel.html"><code>Как выделить сущности из практики и собрать минимально достаточную метамодель</code></a></li>
+<li><a class="inline-page-link" href="Language-ObjectTypesAndAttributes.html"><code>Как проектировать типы объектов и атрибуты</code></a></li>
+<li><a class="inline-page-link" href="Language-RelationsHierarchiesAndReferenceObjects.html"><code>Как проектировать связи, иерархии и переиспользуемые справочники</code></a></li>
+<li><a class="inline-page-link" href="Views-DiagramTableAndMultipleViews.html"><code>Как делать диаграммы, таблицы и несколько представлений одной модели</code></a></li>
+<li><a class="inline-page-link" href="Validation-PilotValidationAndAvoidOvermodeling.html"><code>Как проверить метамодель на пилоте и не переусложнить язык</code></a></li>
+</ol>
+<h4 id="куда-идти-дальше-3">Куда идти дальше</h4>
+<ul>
+<li><a class="inline-page-link" href="Patterns-ProcessesRequirementsAndTraceability.html"><code>Паттерн: процессы, требования и traceability</code></a></li>
+<li><a class="inline-page-link" href="Views-ObjectCardsPassportsAndDocuments.html"><code>Как делать карточки объектов, паспорта и документы на базе модели</code></a></li>
+<li><a class="inline-page-link" href="Integrations-ModelInGovernanceReviewAndOperations.html"><code>Как встроить модель в governance, review и операционные процессы</code></a></li>
+</ul>
+<h4 id="когда-этот-маршрут-особенно-подходит-3">Когда этот маршрут особенно подходит</h4>
+<ul>
+<li>когда важно сохранить понятность для бизнеса;</li>
+<li>когда в модели должны жить и роли, и документы, и статусы, и контрольные точки;</li>
+<li>когда нужна не просто схема процесса, а рабочий язык изменений.</li>
+</ul>
+<h3 id="4-архитектор-данных-или-data-governance-lead">4. Архитектор данных или data governance lead</h3>
+<h4 id="типичные-задачи-4">Типичные задачи</h4>
+<ul>
+<li>data product governance;</li>
+<li>глоссарий и канонические сущности;</li>
+<li>модель чувствительных данных и compliance;</li>
+<li>каталог владельцев, потребителей, качественных правил и ограничений.</li>
+</ul>
+<h4 id="с-чего-начать-4">С чего начать</h4>
+<ol>
+<li><a class="inline-page-link" href="Introduction-WhatIsMetamodelAndWhenNeeded.html"><code>Что такое метамодель в Architeezy и когда она нужна</code></a></li>
+<li><a class="inline-page-link" href="Discovery-DomainScopeAndPilotCase.html"><code>Как выбрать границы предметной области и пилотный кейс</code></a></li>
+<li><a class="inline-page-link" href="Discovery-ExtractConceptsAndBuildMinimalMetamodel.html"><code>Как выделить сущности из практики и собрать минимально достаточную метамодель</code></a></li>
+<li><a class="inline-page-link" href="Language-ObjectTypesAndAttributes.html"><code>Как проектировать типы объектов и атрибуты</code></a></li>
+<li><a class="inline-page-link" href="Language-RelationsHierarchiesAndReferenceObjects.html"><code>Как проектировать связи, иерархии и переиспользуемые справочники</code></a></li>
+<li><a class="inline-page-link" href="Language-LifecyclesStatusesVersionsAndRules.html"><code>Как задавать статусы, жизненные циклы, версии и обязательные правила</code></a></li>
+<li><a class="inline-page-link" href="Views-DiagramTableAndMultipleViews.html"><code>Как делать диаграммы, таблицы и несколько представлений одной модели</code></a></li>
+</ol>
+<h4 id="куда-идти-дальше-4">Куда идти дальше</h4>
+<ul>
+<li><a class="inline-page-link" href="Patterns-DataGovernanceGlossariesAndCompliance.html"><code>Паттерн: data governance, глоссарии и compliance обмена данными</code></a></li>
+<li><a class="inline-page-link" href="Views-ObjectCardsPassportsAndDocuments.html"><code>Как делать карточки объектов, паспорта и документы на базе модели</code></a></li>
+<li><a class="inline-page-link" href="Integrations-RestApiMcpAndAi.html"><code>Как использовать REST API, MCP и AI поверх кастомной метамодели</code></a></li>
+<li><a class="inline-page-link" href="Validation-ScalingAndMetamodelGovernance.html"><code>Как масштабировать и сопровождать метамодель в командах</code></a></li>
+</ul>
+<h4 id="когда-этот-маршрут-особенно-подходит-4">Когда этот маршрут особенно подходит</h4>
+<ul>
+<li>когда нужно связать бизнес- и технический слой данных;</li>
+<li>когда одна и та же модель должна быть полезна и владельцам данных, и инженерам;</li>
+<li>когда важны качества данных, чувствительность, владение и правила использования.</li>
+</ul>
+<h3 id="5-инфраструктурный-или-платформенный-архитектор">5. Инфраструктурный или платформенный архитектор</h3>
+<h4 id="типичные-задачи-5">Типичные задачи</h4>
+<ul>
+<li>топология среды и DR;</li>
+<li>каталог платформенных сервисов;</li>
+<li>эксплуатационные зависимости и blockers;</li>
+<li>техническая модель среды для review и operational readiness.</li>
+</ul>
+<h4 id="с-чего-начать-5">С чего начать</h4>
+<ol>
+<li><a class="inline-page-link" href="Introduction-WhatIsMetamodelAndWhenNeeded.html"><code>Что такое метамодель в Architeezy и когда она нужна</code></a></li>
+<li><a class="inline-page-link" href="Discovery-DomainScopeAndPilotCase.html"><code>Как выбрать границы предметной области и пилотный кейс</code></a></li>
+<li><a class="inline-page-link" href="Discovery-ExtractConceptsAndBuildMinimalMetamodel.html"><code>Как выделить сущности из практики и собрать минимально достаточную метамодель</code></a></li>
+<li><a class="inline-page-link" href="Language-ObjectTypesAndAttributes.html"><code>Как проектировать типы объектов и атрибуты</code></a></li>
+<li><a class="inline-page-link" href="Language-RelationsHierarchiesAndReferenceObjects.html"><code>Как проектировать связи, иерархии и переиспользуемые справочники</code></a></li>
+<li><a class="inline-page-link" href="Language-LifecyclesStatusesVersionsAndRules.html"><code>Как задавать статусы, жизненные циклы, версии и обязательные правила</code></a></li>
+<li><a class="inline-page-link" href="Views-DiagramTableAndMultipleViews.html"><code>Как делать диаграммы, таблицы и несколько представлений одной модели</code></a></li>
+</ol>
+<h4 id="куда-идти-дальше-5">Куда идти дальше</h4>
+<ul>
+<li><a class="inline-page-link" href="Patterns-InfrastructurePlatformAndOperations.html"><code>Паттерн: инфраструктура, платформа и эксплуатационные зависимости</code></a></li>
+<li><a class="inline-page-link" href="Views-ObjectCardsPassportsAndDocuments.html"><code>Как делать карточки объектов, паспорта и документы на базе модели</code></a></li>
+<li><a class="inline-page-link" href="Integrations-ModelInGovernanceReviewAndOperations.html"><code>Как встроить модель в governance, review и операционные процессы</code></a></li>
+</ul>
+<h4 id="когда-этот-маршрут-особенно-подходит-5">Когда этот маршрут особенно подходит</h4>
+<ul>
+<li>когда нужно описывать не только архитектуру, но и эксплуатационные свойства;</li>
+<li>когда модель должна использоваться в DR review, release review или readiness-проверках;</li>
+<li>когда одной картинки уже недостаточно и нужны таблицы, карточки и контрольные атрибуты.</li>
+</ul>
+<div class="screenshot-placeholder">[Скриншот 2 - Таблица или меню с маршрутами по ролям: enterprise, solution, business, data, infrastructure]</div>
+<h2 id="маршруты-по-типу-сценария">Маршруты по типу сценария</h2>
+<p>Иногда пользователю проще выбрать маршрут не по роли, а по задаче. Ниже самый удобный способ выбора по типу будущей метамодели.</p>
+<h3 id="если-вы-строите-каталог-или-управленческий-реестр">Если вы строите каталог или управленческий реестр</h3>
+<p>Читайте в таком порядке:</p>
+<ol>
+<li><a class="inline-page-link" href="Introduction-WhatIsMetamodelAndWhenNeeded.html"><code>Что такое метамодель в Architeezy и когда она нужна</code></a></li>
+<li><a class="inline-page-link" href="Discovery-DomainScopeAndPilotCase.html"><code>Как выбрать границы предметной области и пилотный кейс</code></a></li>
+<li><a class="inline-page-link" href="Language-ObjectTypesAndAttributes.html"><code>Как проектировать типы объектов и атрибуты</code></a></li>
+<li><a class="inline-page-link" href="Language-RelationsHierarchiesAndReferenceObjects.html"><code>Как проектировать связи, иерархии и переиспользуемые справочники</code></a></li>
+<li><a class="inline-page-link" href="Views-DiagramTableAndMultipleViews.html"><code>Как делать диаграммы, таблицы и несколько представлений одной модели</code></a></li>
+<li><a class="inline-page-link" href="Views-ObjectCardsPassportsAndDocuments.html"><code>Как делать карточки объектов, паспорта и документы на базе модели</code></a></li>
+<li><a class="inline-page-link" href="Patterns-CatalogsAndManagementRegisters.html"><code>Паттерн: каталоги и управленческие реестры</code></a></li>
+</ol>
+<p>Подходит для:</p>
+<ul>
+<li>capability и initiative реестров;</li>
+<li>сервисных паспортов;</li>
+<li>платформенных каталогов.</li>
+</ul>
+<h3 id="если-вы-строите-процессную-или-traceability-модель">Если вы строите процессную или traceability-модель</h3>
+<p>Читайте в таком порядке:</p>
+<ol>
+<li><a class="inline-page-link" href="Introduction-WhatIsMetamodelAndWhenNeeded.html"><code>Что такое метамодель в Architeezy и когда она нужна</code></a></li>
+<li><a class="inline-page-link" href="Discovery-DomainScopeAndPilotCase.html"><code>Как выбрать границы предметной области и пилотный кейс</code></a></li>
+<li><a class="inline-page-link" href="Discovery-ExtractConceptsAndBuildMinimalMetamodel.html"><code>Как выделить сущности из практики и собрать минимально достаточную метамодель</code></a></li>
+<li><a class="inline-page-link" href="Language-ObjectTypesAndAttributes.html"><code>Как проектировать типы объектов и атрибуты</code></a></li>
+<li><a class="inline-page-link" href="Views-DiagramTableAndMultipleViews.html"><code>Как делать диаграммы, таблицы и несколько представлений одной модели</code></a></li>
+<li><a class="inline-page-link" href="Integrations-ModelInGovernanceReviewAndOperations.html"><code>Как встроить модель в governance, review и операционные процессы</code></a></li>
+<li><a class="inline-page-link" href="Patterns-ProcessesRequirementsAndTraceability.html"><code>Паттерн: процессы, требования и traceability</code></a></li>
+</ol>
+<p>Подходит для:</p>
+<ul>
+<li>процессов с ролями, документами и SLA;</li>
+<li>согласований и проверок;</li>
+<li>операционных моделей подразделений.</li>
+</ul>
+<h3 id="если-вы-строите-интеграционный-или-событийный-dsl">Если вы строите интеграционный или событийный DSL</h3>
+<p>Читайте в таком порядке:</p>
+<ol>
+<li><a class="inline-page-link" href="Introduction-WhatIsMetamodelAndWhenNeeded.html"><code>Что такое метамодель в Architeezy и когда она нужна</code></a></li>
+<li><a class="inline-page-link" href="Discovery-DomainScopeAndPilotCase.html"><code>Как выбрать границы предметной области и пилотный кейс</code></a></li>
+<li><a class="inline-page-link" href="Language-ObjectTypesAndAttributes.html"><code>Как проектировать типы объектов и атрибуты</code></a></li>
+<li><a class="inline-page-link" href="Language-RelationsHierarchiesAndReferenceObjects.html"><code>Как проектировать связи, иерархии и переиспользуемые справочники</code></a></li>
+<li><a class="inline-page-link" href="Language-LifecyclesStatusesVersionsAndRules.html"><code>Как задавать статусы, жизненные циклы, версии и обязательные правила</code></a></li>
+<li><a class="inline-page-link" href="Views-DiagramTableAndMultipleViews.html"><code>Как делать диаграммы, таблицы и несколько представлений одной модели</code></a></li>
+<li><a class="inline-page-link" href="Patterns-IntegrationsEventsAndTechnicalContracts.html"><code>Паттерн: интеграции, события и технические контракты</code></a></li>
+<li><a class="inline-page-link" href="Integrations-RestApiMcpAndAi.html"><code>Как использовать REST API, MCP и AI поверх кастомной метамодели</code></a></li>
+</ol>
+<p>Подходит для:</p>
+<ul>
+<li>контрактов между системами;</li>
+<li>event-driven архитектуры;</li>
+<li>технических каталогов взаимодействий.</li>
+</ul>
+<h3 id="если-вы-строите-data-governance-модель">Если вы строите data governance-модель</h3>
+<p>Читайте в таком порядке:</p>
+<ol>
+<li><a class="inline-page-link" href="Introduction-WhatIsMetamodelAndWhenNeeded.html"><code>Что такое метамодель в Architeezy и когда она нужна</code></a></li>
+<li><a class="inline-page-link" href="Discovery-DomainScopeAndPilotCase.html"><code>Как выбрать границы предметной области и пилотный кейс</code></a></li>
+<li><a class="inline-page-link" href="Discovery-ExtractConceptsAndBuildMinimalMetamodel.html"><code>Как выделить сущности из практики и собрать минимально достаточную метамодель</code></a></li>
+<li><a class="inline-page-link" href="Language-ObjectTypesAndAttributes.html"><code>Как проектировать типы объектов и атрибуты</code></a></li>
+<li><a class="inline-page-link" href="Language-LifecyclesStatusesVersionsAndRules.html"><code>Как задавать статусы, жизненные циклы, версии и обязательные правила</code></a></li>
+<li><a class="inline-page-link" href="Views-DiagramTableAndMultipleViews.html"><code>Как делать диаграммы, таблицы и несколько представлений одной модели</code></a></li>
+<li><a class="inline-page-link" href="Views-ObjectCardsPassportsAndDocuments.html"><code>Как делать карточки объектов, паспорта и документы на базе модели</code></a></li>
+<li><a class="inline-page-link" href="Patterns-DataGovernanceGlossariesAndCompliance.html"><code>Паттерн: data governance, глоссарии и compliance обмена данными</code></a></li>
+</ol>
+<p>Подходит для:</p>
+<ul>
+<li>data products;</li>
+<li>глоссариев;</li>
+<li>чувствительных данных и compliance;</li>
+<li>governance-каталогов данных.</li>
+</ul>
+<h3 id="если-вы-строите-инфраструктурную-или-эксплуатационную-модель">Если вы строите инфраструктурную или эксплуатационную модель</h3>
+<p>Читайте в таком порядке:</p>
+<ol>
+<li><a class="inline-page-link" href="Introduction-WhatIsMetamodelAndWhenNeeded.html"><code>Что такое метамодель в Architeezy и когда она нужна</code></a></li>
+<li><a class="inline-page-link" href="Discovery-DomainScopeAndPilotCase.html"><code>Как выбрать границы предметной области и пилотный кейс</code></a></li>
+<li><a class="inline-page-link" href="Language-ObjectTypesAndAttributes.html"><code>Как проектировать типы объектов и атрибуты</code></a></li>
+<li><a class="inline-page-link" href="Language-RelationsHierarchiesAndReferenceObjects.html"><code>Как проектировать связи, иерархии и переиспользуемые справочники</code></a></li>
+<li><a class="inline-page-link" href="Language-LifecyclesStatusesVersionsAndRules.html"><code>Как задавать статусы, жизненные циклы, версии и обязательные правила</code></a></li>
+<li><a class="inline-page-link" href="Views-DiagramTableAndMultipleViews.html"><code>Как делать диаграммы, таблицы и несколько представлений одной модели</code></a></li>
+<li><a class="inline-page-link" href="Integrations-ModelInGovernanceReviewAndOperations.html"><code>Как встроить модель в governance, review и операционные процессы</code></a></li>
+<li><a class="inline-page-link" href="Patterns-InfrastructurePlatformAndOperations.html"><code>Паттерн: инфраструктура, платформа и эксплуатационные зависимости</code></a></li>
+</ol>
+<p>Подходит для:</p>
+<ul>
+<li>топологии среды;</li>
+<li>DR-моделей;</li>
+<li>платформенных сервисов;</li>
+<li>operational blockers и readiness-checks.</li>
+</ul>
+<h2 id="отдельный-маршрут-для-быстрого-пилота">Отдельный маршрут для быстрого пилота</h2>
+<p>Если вам нужно запустить первую метамодель за короткий срок и показать пользу на одном кейсе, используйте этот маршрут.</p>
+<h3 id="цель-маршрута">Цель маршрута</h3>
+<p>Не построить идеальный язык, а быстро получить первую работающую версию на реальном сценарии.</p>
+<h3 id="маршрут">Маршрут</h3>
+<ol>
+<li><a class="inline-page-link" href="Introduction-WhatIsMetamodelAndWhenNeeded.html"><code>Что такое метамодель в Architeezy и когда она нужна</code></a></li>
+<li><a class="inline-page-link" href="Discovery-DomainScopeAndPilotCase.html"><code>Как выбрать границы предметной области и пилотный кейс</code></a></li>
+<li><a class="inline-page-link" href="Discovery-ExtractConceptsAndBuildMinimalMetamodel.html"><code>Как выделить сущности из практики и собрать минимально достаточную метамодель</code></a></li>
+<li><a class="inline-page-link" href="Language-ObjectTypesAndAttributes.html"><code>Как проектировать типы объектов и атрибуты</code></a></li>
+<li><a class="inline-page-link" href="Views-DiagramTableAndMultipleViews.html"><code>Как делать диаграммы, таблицы и несколько представлений одной модели</code></a></li>
+<li><a class="inline-page-link" href="Validation-PilotValidationAndAvoidOvermodeling.html"><code>Как проверить метамодель на пилоте и не переусложнить язык</code></a></li>
+</ol>
+<h3 id="когда-выбирать-именно-его">Когда выбирать именно его</h3>
+<ul>
+<li>у вас ограниченное время;</li>
+<li>нужно доказать ценность подхода команде или руководителю;</li>
+<li>вы ещё не готовы масштабировать язык на всю компанию;</li>
+<li>важно сначала проверить идею на одном живом примере.</li>
+</ul>
+<h2 id="отдельный-маршрут-для-api-mcp-и-ai-сценариев">Отдельный маршрут для API, MCP и AI-сценариев</h2>
+<p>Если вы заранее знаете, что метамодель будет использоваться не только людьми, но и автоматизацией, не откладывайте эти страницы на самый конец.</p>
+<h3 id="маршрут-2">Маршрут</h3>
+<ol>
+<li><a class="inline-page-link" href="Introduction-WhatIsMetamodelAndWhenNeeded.html"><code>Что такое метамодель в Architeezy и когда она нужна</code></a></li>
+<li><a class="inline-page-link" href="Discovery-DomainScopeAndPilotCase.html"><code>Как выбрать границы предметной области и пилотный кейс</code></a></li>
+<li><a class="inline-page-link" href="Language-ObjectTypesAndAttributes.html"><code>Как проектировать типы объектов и атрибуты</code></a></li>
+<li><a class="inline-page-link" href="Language-RelationsHierarchiesAndReferenceObjects.html"><code>Как проектировать связи, иерархии и переиспользуемые справочники</code></a></li>
+<li><a class="inline-page-link" href="Views-DiagramTableAndMultipleViews.html"><code>Как делать диаграммы, таблицы и несколько представлений одной модели</code></a></li>
+<li><a class="inline-page-link" href="Integrations-RestApiMcpAndAi.html"><code>Как использовать REST API, MCP и AI поверх кастомной метамодели</code></a></li>
+</ol>
+<h3 id="когда-этот-маршрут-нужен">Когда этот маршрут нужен</h3>
+<ul>
+<li>если модель должна читаться через API;</li>
+<li>если вы хотите автоматически пополнять или анализировать модель;</li>
+<li>если вы планируете AI-помощника поверх предметной области;</li>
+<li>если важна совместимость языка с каталогами, отчётами и машинным использованием.</li>
+</ul>
+<div class="screenshot-placeholder">[Скриншот 3 - Пример навигационного блока с отдельными маршрутами: быстрый пилот и API/MCP/AI]</div>
+<h2 id="как-выбрать-маршрут-если-ваш-кейс-смешанный">Как выбрать маршрут, если ваш кейс смешанный</h2>
+<p>Во многих командах кейс находится между несколькими категориями. Например:</p>
+<ul>
+<li>сервисный каталог с архитектурным governance;</li>
+<li>data product модель с интеграционным контрактом;</li>
+<li>платформенный каталог с эксплуатационными ограничениями;</li>
+<li>процессная модель, связанная с системами и change review.</li>
+</ul>
+<p>В таком случае используйте правило:</p>
+<ol>
+<li>Возьмите основной маршрут по той задаче, которая создаёт главную ценность.</li>
+<li>Добавьте к нему один прикладной паттерн по смежной области.</li>
+<li>Не пытайтесь читать все паттерны сразу.</li>
+</ol>
+<p>Пример:</p>
+<ul>
+<li>если основной кейс - каталог сервисов, берите маршрут корпоративного архитектора;</li>
+<li>если внутри него важны ещё governance-решения, добавьте страницу про использование модели в review и governance;</li>
+<li>если дальше появится автоматизация, добавьте маршрут API/MCP.</li>
+</ul>
+<h2 id="если-вы-делаете-маршрут-для-команды-а-не-для-себя">Если вы делаете маршрут для команды, а не для себя</h2>
+<p>Если документация нужна не одному пользователю, а нескольким ролям, удобно задать команде три вопроса:</p>
+<ul>
+<li>кто будет проектировать язык;</li>
+<li>кто будет его читать;</li>
+<li>в каком процессе модель будет использоваться.</li>
+</ul>
+<p>После этого обычно становится понятно, какой маршрут должен быть базовым, а какие страницы нужны как дополнительные.</p>
+<p>Пример:</p>
+<ul>
+<li>если язык проектирует архитектор, а читает бизнес, обязательно включайте страницы про представления, карточки и прикладной паттерн;</li>
+<li>если язык проектирует data governance команда, а использовать его будут и аналитики, и инженеры, включайте маршрут по data governance и страницу про несколько представлений;</li>
+<li>если модель нужна в release review, не пропускайте страницу про использование модели в governance и операционных процессах.</li>
+</ul>
+<h2 id="что-читать-дальше">Что читать дальше</h2>
+<p>Если вы впервые открыли документацию, обычно лучший следующий шаг один из двух:</p>
+<ul>
+<li>если вы ещё не выбрали scope: переходите к <a class="inline-page-link" href="Discovery-DomainScopeAndPilotCase.html"><code>Как выбрать границы предметной области и пилотный кейс</code></a>;</li>
+<li>если scope уже ясен и нужно просто быстро стартовать: переходите к <a class="inline-page-link" href="Discovery-ExtractConceptsAndBuildMinimalMetamodel.html"><code>Как выделить сущности из практики и собрать минимально достаточную метамодель</code></a>.</li>
+</ul>
+<p>Если вы пришли сюда уже с понятным кейсом, идите сразу в соответствующий маршрут выше и не пытайтесь читать всю документацию линейно.</p>
+<h2 id="краткий-вывод">Краткий вывод</h2>
+<p>Эта страница нужна для того, чтобы превратить большую документацию в управляемый путь.</p>
+<p>Вместо вопроса &quot;что читать всё-таки сначала?&quot; пользователь должен выйти отсюда с понятным маршрутом:</p>
+<ul>
+<li>по своей роли;</li>
+<li>по типу задачи;</li>
+<li>по уровню срочности;</li>
+<li>по наличию или отсутствию API/MCP/AI-сценариев.</li>
+</ul>
+<p>Если маршрут выбран правильно, остальная документация перестаёт выглядеть перегруженной и начинает работать как инструмент, а не как архив знаний.</p>
+      </article>
+      <div class="pager"><a class="pager-link" href="Introduction-WhatIsMetamodelAndWhenNeeded.html">&larr; Что такое метамодель в Architeezy и когда она нужна</a><span class="pager-spacer"></span><a class="pager-link" href="Discovery-DomainScopeAndPilotCase.html">Как выбрать границы предметной области и пилотный кейс &rarr;</a></div>
+    </main>
+  </div>
+</body>
+</html>
