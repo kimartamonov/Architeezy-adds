@@ -17,13 +17,13 @@
 ## Текущая задача
 
 - Статус: `CURRENT`
-- Порядок: `03`
-- Раздел документации: `От идеи к языку`
-- Страница документации: `Как выбрать границы предметной области и пилотный кейс`
-- Файл требований: `metadoc-req/Discovery-DomainScopeAndPilotCase.md`
-- Целевой файл документа: `metadoc-pages/Discovery-DomainScopeAndPilotCase.md`
-- Файл отчёта: `metadoc-reports/Discovery-DomainScopeAndPilotCase-report.md`
-- Следующая задача после завершения: `Discovery-ExtractConceptsAndBuildMinimalMetamodel.md`
+- Порядок: `05`
+- Раздел документации: `Конструкция метамодели`
+- Страница документации: `Как проектировать типы объектов и атрибуты`
+- Файл требований: `metadoc-req/Language-ObjectTypesAndAttributes.md`
+- Целевой файл документа: `metadoc-pages/Language-ObjectTypesAndAttributes.md`
+- Файл отчёта: `metadoc-reports/Language-ObjectTypesAndAttributes-report.md`
+- Следующая задача после завершения: `Language-RelationsHierarchiesAndReferenceObjects.md`
 
 ## Очередь документов
 
@@ -31,9 +31,9 @@
 | --- | --- | --- | --- | --- | --- | --- |
 | 01 | DONE | Введение | Что такое метамодель в Architeezy и когда она нужна | metadoc-req/Introduction-WhatIsMetamodelAndWhenNeeded.md | metadoc-pages/Introduction-WhatIsMetamodelAndWhenNeeded.md | metadoc-reports/Introduction-WhatIsMetamodelAndWhenNeeded-report.md |
 | 02 | DONE | Введение | Маршруты чтения по ролям и сценариям | metadoc-req/Introduction-ReadingPathsByRoleAndScenario.md | metadoc-pages/Introduction-ReadingPathsByRoleAndScenario.md | metadoc-reports/Introduction-ReadingPathsByRoleAndScenario-report.md |
-| 03 | CURRENT | От идеи к языку | Как выбрать границы предметной области и пилотный кейс | metadoc-req/Discovery-DomainScopeAndPilotCase.md | metadoc-pages/Discovery-DomainScopeAndPilotCase.md | metadoc-reports/Discovery-DomainScopeAndPilotCase-report.md |
-| 04 | QUEUED | От идеи к языку | Как выделить сущности из практики и собрать минимально достаточную метамодель | metadoc-req/Discovery-ExtractConceptsAndBuildMinimalMetamodel.md | metadoc-pages/Discovery-ExtractConceptsAndBuildMinimalMetamodel.md | metadoc-reports/Discovery-ExtractConceptsAndBuildMinimalMetamodel-report.md |
-| 05 | QUEUED | Конструкция метамодели | Как проектировать типы объектов и атрибуты | metadoc-req/Language-ObjectTypesAndAttributes.md | metadoc-pages/Language-ObjectTypesAndAttributes.md | metadoc-reports/Language-ObjectTypesAndAttributes-report.md |
+| 03 | DONE | От идеи к языку | Как выбрать границы предметной области и пилотный кейс | metadoc-req/Discovery-DomainScopeAndPilotCase.md | metadoc-pages/Discovery-DomainScopeAndPilotCase.md | metadoc-reports/Discovery-DomainScopeAndPilotCase-report.md |
+| 04 | DONE | От идеи к языку | Как выделить сущности из практики и собрать минимально достаточную метамодель | metadoc-req/Discovery-ExtractConceptsAndBuildMinimalMetamodel.md | metadoc-pages/Discovery-ExtractConceptsAndBuildMinimalMetamodel.md | metadoc-reports/Discovery-ExtractConceptsAndBuildMinimalMetamodel-report.md |
+| 05 | CURRENT | Конструкция метамодели | Как проектировать типы объектов и атрибуты | metadoc-req/Language-ObjectTypesAndAttributes.md | metadoc-pages/Language-ObjectTypesAndAttributes.md | metadoc-reports/Language-ObjectTypesAndAttributes-report.md |
 | 06 | QUEUED | Конструкция метамодели | Как проектировать связи, иерархии и переиспользуемые справочники | metadoc-req/Language-RelationsHierarchiesAndReferenceObjects.md | metadoc-pages/Language-RelationsHierarchiesAndReferenceObjects.md | metadoc-reports/Language-RelationsHierarchiesAndReferenceObjects-report.md |
 | 07 | QUEUED | Конструкция метамодели | Как задавать статусы, жизненные циклы, версии и обязательные правила | metadoc-req/Language-LifecyclesStatusesVersionsAndRules.md | metadoc-pages/Language-LifecyclesStatusesVersionsAndRules.md | metadoc-reports/Language-LifecyclesStatusesVersionsAndRules-report.md |
 | 08 | QUEUED | Представления и публикация | Как делать диаграммы, таблицы и несколько представлений одной модели | metadoc-req/Views-DiagramTableAndMultipleViews.md | metadoc-pages/Views-DiagramTableAndMultipleViews.md | metadoc-reports/Views-DiagramTableAndMultipleViews-report.md |
@@ -54,3 +54,5 @@
 | --- | --- | --- | --- | --- |
 | 2026-03-19 | 01 | Что такое метамодель в Architeezy и когда она нужна | metadoc-pages/Introduction-WhatIsMetamodelAndWhenNeeded.md | metadoc-reports/Introduction-WhatIsMetamodelAndWhenNeeded-report.md |
 | 2026-03-19 | 02 | Маршруты чтения по ролям и сценариям | metadoc-pages/Introduction-ReadingPathsByRoleAndScenario.md | metadoc-reports/Introduction-ReadingPathsByRoleAndScenario-report.md |
+| 2026-03-19 | 03 | Как выбрать границы предметной области и пилотный кейс | metadoc-pages/Discovery-DomainScopeAndPilotCase.md | metadoc-reports/Discovery-DomainScopeAndPilotCase-report.md |
+| 2026-03-19 | 04 | Как выделить сущности из практики и собрать минимально достаточную метамодель | metadoc-pages/Discovery-ExtractConceptsAndBuildMinimalMetamodel.md | metadoc-reports/Discovery-ExtractConceptsAndBuildMinimalMetamodel-report.md |
