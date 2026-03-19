@@ -17,13 +17,13 @@
 ## Текущая задача
 
 - Статус: `CURRENT`
-- Порядок: `12`
-- Раздел документации: `Интеграция и автоматизация`
-- Страница документации: `Как использовать REST API, MCP и AI поверх кастомной метамодели`
-- Файл требований: `metadoc-req/Integrations-RestApiMcpAndAi.md`
-- Целевой файл документа: `metadoc-pages/Integrations-RestApiMcpAndAi.md`
-- Файл отчёта: `metadoc-reports/Integrations-RestApiMcpAndAi-report.md`
-- Следующая задача после завершения: `Integrations-ModelInGovernanceReviewAndOperations.md`
+- Порядок: `15`
+- Раздел документации: `Прикладные паттерны`
+- Страница документации: `Паттерн: процессы, требования и traceability`
+- Файл требований: `metadoc-req/Patterns-ProcessesRequirementsAndTraceability.md`
+- Целевой файл документа: `metadoc-pages/Patterns-ProcessesRequirementsAndTraceability.md`
+- Файл отчёта: `metadoc-reports/Patterns-ProcessesRequirementsAndTraceability-report.md`
+- Следующая задача после завершения: `Patterns-IntegrationsEventsAndTechnicalContracts.md`
 
 ## Очередь документов
 
@@ -40,10 +40,10 @@
 | 09 | DONE | Представления и публикация | Как делать карточки объектов, паспорта и документы на базе модели | metadoc-req/Views-ObjectCardsPassportsAndDocuments.md | metadoc-pages/Views-ObjectCardsPassportsAndDocuments.md | metadoc-reports/Views-ObjectCardsPassportsAndDocuments-report.md |
 | 10 | DONE | Проверка и развитие | Как проверить метамодель на пилоте и не переусложнить язык | metadoc-req/Validation-PilotValidationAndAvoidOvermodeling.md | metadoc-pages/Validation-PilotValidationAndAvoidOvermodeling.md | metadoc-reports/Validation-PilotValidationAndAvoidOvermodeling-report.md |
 | 11 | DONE | Проверка и развитие | Как масштабировать и сопровождать метамодель в командах | metadoc-req/Validation-ScalingAndMetamodelGovernance.md | metadoc-pages/Validation-ScalingAndMetamodelGovernance.md | metadoc-reports/Validation-ScalingAndMetamodelGovernance-report.md |
-| 12 | CURRENT | Интеграция и автоматизация | Как использовать REST API, MCP и AI поверх кастомной метамодели | metadoc-req/Integrations-RestApiMcpAndAi.md | metadoc-pages/Integrations-RestApiMcpAndAi.md | metadoc-reports/Integrations-RestApiMcpAndAi-report.md |
-| 13 | QUEUED | Интеграция и автоматизация | Как встроить модель в governance, review и операционные процессы | metadoc-req/Integrations-ModelInGovernanceReviewAndOperations.md | metadoc-pages/Integrations-ModelInGovernanceReviewAndOperations.md | metadoc-reports/Integrations-ModelInGovernanceReviewAndOperations-report.md |
-| 14 | QUEUED | Прикладные паттерны | Паттерн: каталоги и управленческие реестры | metadoc-req/Patterns-CatalogsAndManagementRegisters.md | metadoc-pages/Patterns-CatalogsAndManagementRegisters.md | metadoc-reports/Patterns-CatalogsAndManagementRegisters-report.md |
-| 15 | QUEUED | Прикладные паттерны | Паттерн: процессы, требования и traceability | metadoc-req/Patterns-ProcessesRequirementsAndTraceability.md | metadoc-pages/Patterns-ProcessesRequirementsAndTraceability.md | metadoc-reports/Patterns-ProcessesRequirementsAndTraceability-report.md |
+| 12 | DONE | Интеграция и автоматизация | Как использовать REST API, MCP и AI поверх кастомной метамодели | metadoc-req/Integrations-RestApiMcpAndAi.md | metadoc-pages/Integrations-RestApiMcpAndAi.md | metadoc-reports/Integrations-RestApiMcpAndAi-report.md |
+| 13 | DONE | Интеграция и автоматизация | Как встроить модель в governance, review и операционные процессы | metadoc-req/Integrations-ModelInGovernanceReviewAndOperations.md | metadoc-pages/Integrations-ModelInGovernanceReviewAndOperations.md | metadoc-reports/Integrations-ModelInGovernanceReviewAndOperations-report.md |
+| 14 | DONE | Прикладные паттерны | Паттерн: каталоги и управленческие реестры | metadoc-req/Patterns-CatalogsAndManagementRegisters.md | metadoc-pages/Patterns-CatalogsAndManagementRegisters.md | metadoc-reports/Patterns-CatalogsAndManagementRegisters-report.md |
+| 15 | CURRENT | Прикладные паттерны | Паттерн: процессы, требования и traceability | metadoc-req/Patterns-ProcessesRequirementsAndTraceability.md | metadoc-pages/Patterns-ProcessesRequirementsAndTraceability.md | metadoc-reports/Patterns-ProcessesRequirementsAndTraceability-report.md |
 | 16 | QUEUED | Прикладные паттерны | Паттерн: интеграции, события и технические контракты | metadoc-req/Patterns-IntegrationsEventsAndTechnicalContracts.md | metadoc-pages/Patterns-IntegrationsEventsAndTechnicalContracts.md | metadoc-reports/Patterns-IntegrationsEventsAndTechnicalContracts-report.md |
 | 17 | QUEUED | Прикладные паттерны | Паттерн: data governance, глоссарии и compliance обмена данными | metadoc-req/Patterns-DataGovernanceGlossariesAndCompliance.md | metadoc-pages/Patterns-DataGovernanceGlossariesAndCompliance.md | metadoc-reports/Patterns-DataGovernanceGlossariesAndCompliance-report.md |
 | 18 | QUEUED | Прикладные паттерны | Паттерн: инфраструктура, платформа и эксплуатационные зависимости | metadoc-req/Patterns-InfrastructurePlatformAndOperations.md | metadoc-pages/Patterns-InfrastructurePlatformAndOperations.md | metadoc-reports/Patterns-InfrastructurePlatformAndOperations-report.md |
@@ -63,3 +63,6 @@
 | 2026-03-19 | 09 | Как делать карточки объектов, паспорта и документы на базе модели | metadoc-pages/Views-ObjectCardsPassportsAndDocuments.md | metadoc-reports/Views-ObjectCardsPassportsAndDocuments-report.md |
 | 2026-03-19 | 10 | Как проверить метамодель на пилоте и не переусложнить язык | metadoc-pages/Validation-PilotValidationAndAvoidOvermodeling.md | metadoc-reports/Validation-PilotValidationAndAvoidOvermodeling-report.md |
 | 2026-03-19 | 11 | Как масштабировать и сопровождать метамодель в командах | metadoc-pages/Validation-ScalingAndMetamodelGovernance.md | metadoc-reports/Validation-ScalingAndMetamodelGovernance-report.md |
+| 2026-03-19 | 12 | Как использовать REST API, MCP и AI поверх кастомной метамодели | metadoc-pages/Integrations-RestApiMcpAndAi.md | metadoc-reports/Integrations-RestApiMcpAndAi-report.md |
+| 2026-03-19 | 13 | Как встроить модель в governance, review и операционные процессы | metadoc-pages/Integrations-ModelInGovernanceReviewAndOperations.md | metadoc-reports/Integrations-ModelInGovernanceReviewAndOperations-report.md |
+| 2026-03-19 | 14 | Паттерн: каталоги и управленческие реестры | metadoc-pages/Patterns-CatalogsAndManagementRegisters.md | metadoc-reports/Patterns-CatalogsAndManagementRegisters-report.md |
